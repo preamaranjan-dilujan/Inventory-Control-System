@@ -1,14 +1,25 @@
 package Main;
 
+import Window.Authentication.Login;
+
+/**
+ *@author Kesavan(K7)
+ **/
+
 public class Main {
 
     Main(){
+
       //NothingInside
+
     }
 
     public static void main(String[] args) {
-        InventoryControlApp inventorycontrolapp = new InventoryControlApp();
-        inventorycontrolapp.setVisible(true);
+
+        Login login_window = new Login();
+        login_window.setVisible(true);
+
+
     }
 }
 
