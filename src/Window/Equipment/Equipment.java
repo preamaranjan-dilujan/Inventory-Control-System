@@ -24,8 +24,8 @@ public class Equipment extends JFrame {
     JPanel detailspanel = new JPanel();
     String[] items={"Item 01","Item 02","Item 03","Item 04","Item 05"};
     JComboBox selecteq = new JComboBox(items);
-    JButton showeq = new JButton("Show");
-    JButton updateeq = new JButton("Update Equipment");
+    JButton searcheq = new JButton("Search");
+    JButton addeeq = new JButton("Add Equipment");
     JButton issueeq = new JButton("Issue Equipment");
     JButton returneq = new JButton("Return Equipment");
     JTable details = new JTable();
@@ -73,30 +73,30 @@ public class Equipment extends JFrame {
         selecteq.setFont(new Font("Times New Roman", Font.BOLD, 18));
         add(selecteq);
 
-//        Show Equipment
+//        Search Equipment
 
-        showeq.setBounds(90,145,150,30);
-        showeq.setForeground(Color.darkGray);
-        showeq.setBackground(Color.lightGray);
-        showeq.setFont(new Font("Times New Roman", Font.BOLD, 20));
-        add(showeq);
+        searcheq.setBounds(90,145,150,30);
+        searcheq.setForeground(Color.darkGray);
+        searcheq.setBackground(Color.lightGray);
+        searcheq.setFont(new Font("Times New Roman", Font.BOLD, 20));
+        add(searcheq);
 
-        showeq.addActionListener(new ActionListener() {
+        searcheq.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) { showButtonPressed(); }
+            public void actionPerformed(ActionEvent e) { searchButtonPressed(); }
         });
 
-//        Update Equipment
+//        Add Equipment
 
-        updateeq.setBounds(40,230,250,25);
-        updateeq.setForeground(Color.darkGray);
-        updateeq.setBackground(Color.lightGray);
-        updateeq.setFont(new Font("Times New Roman", Font.BOLD, 20));
-        add(updateeq);
+        addeeq.setBounds(40,230,250,25);
+        addeeq.setForeground(Color.darkGray);
+        addeeq.setBackground(Color.lightGray);
+        addeeq.setFont(new Font("Times New Roman", Font.BOLD, 20));
+        add(addeeq);
 
-        updateeq.addActionListener(new ActionListener() {
+        addeeq.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) { updateButtonPressed(); }
+            public void actionPerformed(ActionEvent e) { addButtonPressed(); }
         });
 
 //        Issue Equipment
@@ -154,11 +154,11 @@ public class Equipment extends JFrame {
 
     }
 
-    public void showButtonPressed(){
+    public void searchButtonPressed(){
 
     }
 
-    public void updateButtonPressed(){
+    public void addButtonPressed(){
 
         this.setVisible(false);
 

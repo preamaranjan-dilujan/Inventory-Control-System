@@ -15,13 +15,15 @@ public class Login extends JFrame {
 
 //    Variable Declaration
 
+    String[] loginType={"Student","Lab Assistant","Super Admin"};
+
+    JComboBox logintype = new JComboBox(loginType);
     JLabel title = new JLabel();
     JLabel username = new JLabel();
     JLabel password = new JLabel();
     JTextArea uname = new JTextArea();
     JPasswordField pword = new JPasswordField();
     JButton login = new JButton();
-    JButton signup = new JButton();
 
     public Login(){
 
@@ -33,10 +35,11 @@ public class Login extends JFrame {
         getContentPane().setForeground(Color.darkGray);
         getContentPane().setBackground(Color.lightGray);
 
+
 //        Title
 
         title.setText("Login");
-        title.setBounds(250,20,100,50);
+        title.setBounds(260,20,250,50);
         title.setForeground(Color.darkGray);
         title.setBackground(Color.lightGray);
         title.setFont(new Font("Times New Roman", Font.BOLD, 30));
@@ -73,25 +76,20 @@ public class Login extends JFrame {
         pword.setFont(new Font("Times New Roman", Font.BOLD, 20));
         add(pword);
 
-//        Signup
 
-        signup.setText("Signup");
-        signup.setBounds(130,240,150,30);
-        signup.setForeground(Color.darkGray);
-        signup.setBackground(Color.lightGray);
-        signup.setFont(new Font("Times New Roman", Font.BOLD, 20));
-        add(signup);
+//        Login Type
 
-        signup.addActionListener(new ActionListener () {
-            public void actionPerformed(ActionEvent e) {
-                    signupButtonPressed();
-            }
-        });
+        logintype.setSelectedItem("Student");
+        logintype.setForeground(Color.darkGray);
+        logintype.setBackground(Color.lightGray);
+        logintype.setBounds(70,240,250,30);
+        logintype.setFont(new Font("Times New Roman", Font.BOLD, 25));
+        add(logintype);
 
 //        Login
 
         login.setText("Login");
-        login.setBounds(320,240,150,30);
+        login.setBounds(380,240,150,30);
         login.setForeground(Color.darkGray);
         login.setBackground(Color.lightGray);
         login.setFont(new Font("Times New Roman", Font.BOLD, 20));
@@ -104,14 +102,6 @@ public class Login extends JFrame {
         });
     }
 
-    public void signupButtonPressed(){
-
-        this.setVisible(false);
-
-        Signup signup_window = new Signup();
-        signup_window.setVisible(true);
-
-    }
 
     public void loginButtonPressed(){
 

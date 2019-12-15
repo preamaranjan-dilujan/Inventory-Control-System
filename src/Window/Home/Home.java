@@ -16,6 +16,7 @@ public class Home extends JFrame {
 
 //    Variable Declaration
 
+    JLabel title = new JLabel();
     JButton iconstudent = new JButton();
     JButton iconequipment = new JButton();
     JLabel student = new JLabel();
@@ -33,6 +34,15 @@ public class Home extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setForeground(Color.darkGray);
         getContentPane().setBackground(Color.lightGray);
+
+//        Title
+
+        title.setText("Home");
+        title.setBounds(260,10,250,30);
+        title.setForeground(Color.darkGray);
+        title.setBackground(Color.lightGray);
+        title.setFont(new Font("Times New Roman", Font.BOLD, 25));
+        add(title);
 
 //        Student Window
 
